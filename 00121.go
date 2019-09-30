@@ -69,7 +69,7 @@ func maxValue(a int, b int) int {
 }
 
 func main() {
-	nums := []int{2, 1, 2, 0, 1}
+	nums := []int{7, 1, 5, 3, 6, 4}
 	ret := maxProfit(nums)
 	fmt.Println(ret)
 }
