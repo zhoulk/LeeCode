@@ -25,10 +25,10 @@ func main() {
 	for i := 0; i < MAX_CLOTH; i++ {
 		prices[i] = int64(1 * 200 * (i + 1))
 	}
-	fmt.Println(prices)
+	fmt.Println("price  ", prices)
 
 	starExp := CalStarExp3()
-	fmt.Println(starExp)
+	fmt.Println("starExp  ", starExp)
 
 	lvChao := int64(0)
 	star := int64(1)
@@ -76,8 +76,9 @@ func CalStarExp2() []int64 {
 
 func CalStarExp3() []int64 {
 	starExp := make([]int64, MAX_CLOTH*10)
+	starExp[0] = 0
 	step := float32(0)
-	for i := 0; i < len(starExp); i++ {
+	for i := 1; i < len(starExp); i++ {
 		starExp[i] = int64(starExp[i-1] + int64(step))
 		step = step + 200
 		if i%10 == 0 {
