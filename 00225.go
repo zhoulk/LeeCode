@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 // 使用队列实现栈的下列操作：
 
 // push(x) -- 元素 x 入栈
@@ -18,44 +16,44 @@ import "fmt"
 // 链接：https://leetcode-cn.com/problems/implement-stack-using-queues
 // 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
-type MyStack struct {
-	nums []int
-}
+// type MyStack struct {
+// 	nums []int
+// }
 
-/** Initialize your data structure here. */
-func Constructor() MyStack {
-	return MyStack{
-		nums: make([]int, 0),
-	}
-}
+// /** Initialize your data structure here. */
+// func Constructor() MyStack {
+// 	return MyStack{
+// 		nums: make([]int, 0),
+// 	}
+// }
 
-/** Push element x onto stack. */
-func (this *MyStack) Push(x int) {
-	this.nums = append(this.nums, x)
-}
+// /** Push element x onto stack. */
+// func (this *MyStack) Push(x int) {
+// 	this.nums = append(this.nums, x)
+// }
 
-/** Removes the element on top of the stack and returns that element. */
-func (this *MyStack) Pop() int {
-	if len(this.nums) == 0 {
-		return 0
-	}
-	val := this.nums[len(this.nums)-1]
-	this.nums = this.nums[:len(this.nums)-1]
-	return val
-}
+// /** Removes the element on top of the stack and returns that element. */
+// func (this *MyStack) Pop() int {
+// 	if len(this.nums) == 0 {
+// 		return 0
+// 	}
+// 	val := this.nums[len(this.nums)-1]
+// 	this.nums = this.nums[:len(this.nums)-1]
+// 	return val
+// }
 
-/** Get the top element. */
-func (this *MyStack) Top() int {
-	if len(this.nums) == 0 {
-		return 0
-	}
-	return this.nums[len(this.nums)-1]
-}
+// /** Get the top element. */
+// func (this *MyStack) Top() int {
+// 	if len(this.nums) == 0 {
+// 		return 0
+// 	}
+// 	return this.nums[len(this.nums)-1]
+// }
 
-/** Returns whether the stack is empty. */
-func (this *MyStack) Empty() bool {
-	return len(this.nums) == 0
-}
+// /** Returns whether the stack is empty. */
+// func (this *MyStack) Empty() bool {
+// 	return len(this.nums) == 0
+// }
 
 /**
  * Your MyStack object will be instantiated and called as such:
@@ -66,11 +64,11 @@ func (this *MyStack) Empty() bool {
  * param_4 := obj.Empty();
  */
 
-func main() {
-	obj := Constructor()
-	obj.Push(1212)
-	res1 := obj.Pop()
-	res2 := obj.Top()
-	res3 := obj.Empty()
-	fmt.Println(res1, res2, res3)
-}
+// func main() {
+// 	obj := Constructor()
+// 	obj.Push(1212)
+// 	res1 := obj.Pop()
+// 	res2 := obj.Top()
+// 	res3 := obj.Empty()
+// 	fmt.Println(res1, res2, res3)
+// }
