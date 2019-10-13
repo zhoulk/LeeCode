@@ -22,8 +22,13 @@ const MAX_CLOTH = 40
 
 func main() {
 	prices := make([]int64, MAX_CLOTH)
+	power := int64(0)
 	for i := 0; i < MAX_CLOTH; i++ {
-		prices[i] = int64(1 * 200 * (i + 1))
+		prices[i] = int64(10*(i+1)) + power
+		power += 200
+		if i%10 == 0 && i > 0 {
+			power *= 2
+		}
 	}
 	fmt.Println("price  ", prices)
 
