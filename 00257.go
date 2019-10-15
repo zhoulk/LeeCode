@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"strconv"
 )
 
@@ -78,30 +77,30 @@ func binaryTreePaths(root *TreeNode) []string {
 }
 
 // [2,1,6,null,null,5,null,4,null,3]
-func main() {
-	t1 := new(TreeNode)
-	t1.Val = 4
-	t11 := new(TreeNode)
-	t11.Val = 2
-	t12 := new(TreeNode)
-	t12.Val = 7
-	t111 := new(TreeNode)
-	t111.Val = 1
-	t112 := new(TreeNode)
-	t112.Val = 3
-	t121 := new(TreeNode)
-	t121.Val = 6
-	t122 := new(TreeNode)
-	t122.Val = 9
+// func main() {
+// 	t1 := new(TreeNode)
+// 	t1.Val = 4
+// 	t11 := new(TreeNode)
+// 	t11.Val = 2
+// 	t12 := new(TreeNode)
+// 	t12.Val = 7
+// 	t111 := new(TreeNode)
+// 	t111.Val = 1
+// 	t112 := new(TreeNode)
+// 	t112.Val = 3
+// 	t121 := new(TreeNode)
+// 	t121.Val = 6
+// 	t122 := new(TreeNode)
+// 	t122.Val = 9
 
-	t1.Left = t11
-	t1.Right = t12
-	// t11.Left = t111
-	// t11.Right = t112
-	t12.Left = t121
-	t121.Left = t122
-	t122.Left = t111
+// 	t1.Left = t11
+// 	t1.Right = t12
+// 	// t11.Left = t111
+// 	// t11.Right = t112
+// 	t12.Left = t121
+// 	t121.Left = t122
+// 	t122.Left = t111
 
-	ret := binaryTreePaths(t1)
-	fmt.Println(ret)
-}
+// 	ret := binaryTreePaths(t1)
+// 	fmt.Println(ret)
+// }
