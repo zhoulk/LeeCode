@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -61,7 +60,7 @@ func wordPattern(pattern string, str string) bool {
 	return true
 }
 
-func main() {
-	ret := wordPattern("abba", "dog dog dog dog")
-	fmt.Println(ret)
-}
+// func main() {
+// 	ret := wordPattern("abba", "dog dog dog dog")
+// 	fmt.Println(ret)
+// }
