@@ -49,7 +49,7 @@ func bitCount41(n int) int8 {
 	return int8(n & 0x7f)
 }
 
-func main() {
-	res := readBinaryWatch(1)
-	fmt.Println(res)
-}
+// func main() {
+// 	res := readBinaryWatch(1)
+// 	fmt.Println(res)
+// }

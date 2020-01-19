@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"math"
 )
 
@@ -20,43 +19,43 @@ import (
 
 const MAX_CLOTH = 40
 
-func main() {
-	prices := make([]int64, MAX_CLOTH)
-	power := int64(0)
-	for i := 0; i < MAX_CLOTH; i++ {
-		prices[i] = int64(10*(i+1)) + power
-		power += 200
-		if i%10 == 0 && i > 0 {
-			power *= 2
-		}
-	}
-	fmt.Println("price  ", prices)
+// func main() {
+// 	prices := make([]int64, MAX_CLOTH)
+// 	power := int64(0)
+// 	for i := 0; i < MAX_CLOTH; i++ {
+// 		prices[i] = int64(10*(i+1)) + power
+// 		power += 200
+// 		if i%10 == 0 && i > 0 {
+// 			power *= 2
+// 		}
+// 	}
+// 	fmt.Println("price  ", prices)
 
-	starExp := CalStarExp3()
-	fmt.Println("starExp  ", starExp)
+// 	starExp := CalStarExp3()
+// 	fmt.Println("starExp  ", starExp)
 
-	lvChao := int64(0)
-	star := int64(1)
-	exp := int64(0)
-	seconds := int64(0)
-	for star < MAX_CLOTH*10 {
-		seconds++
-		lvChao += star * 10
+// 	lvChao := int64(0)
+// 	star := int64(1)
+// 	exp := int64(0)
+// 	seconds := int64(0)
+// 	for star < MAX_CLOTH*10 {
+// 		seconds++
+// 		lvChao += star * 10
 
-		// 买衣服
-		if lvChao > prices[star/10] {
-			exp += prices[star/10]
-		}
-		if exp >= starExp[star] {
-			exp -= starExp[star]
-			star++
+// 		// 买衣服
+// 		if lvChao > prices[star/10] {
+// 			exp += prices[star/10]
+// 		}
+// 		if exp >= starExp[star] {
+// 			exp -= starExp[star]
+// 			star++
 
-			if star%10 == 0 {
-				fmt.Println("star  ", star, "   time  ", seconds/(24*3600), "天", (seconds%(24*3600))/3600, "小时", (seconds%3600)/60, "分钟", seconds%60, "秒")
-			}
-		}
-	}
-}
+// 			if star%10 == 0 {
+// 				fmt.Println("star  ", star, "   time  ", seconds/(24*3600), "天", (seconds%(24*3600))/3600, "小时", (seconds%3600)/60, "分钟", seconds%60, "秒")
+// 			}
+// 		}
+// 	}
+// }
 
 func CalStarExp1() []int64 {
 	starExp := make([]int64, MAX_CLOTH*10)
